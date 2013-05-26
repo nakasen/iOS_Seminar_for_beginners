@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AUF-kB-OKi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - 行き先は？-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="xFl-Qd-j44" userLabel="Label - あなたは国内旅行派？ それとも海外旅行派？">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0pK-Az-cx9"/>
+                                    <constraint firstAttribute="width" constant="261" id="z8g-qM-KGz"/>
+                                </constraints>
+                                <string key="text">あなたは国内旅行派？
+それとも海外旅行派？</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvX-fM-eie">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="K6u-zQ-3CO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="国内">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonAction:" destination="2" eventType="touchUpInside" id="YM9-Jg-pqy"/>
+                                    <segue destination="pQb-nL-LT0" kind="push" id="mXK-4k-wk9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef8-fX-F3t">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="Pcl-ww-MK2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="海外">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wQU-zK-BG7" kind="push" id="uoi-Iy-dVf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OvX-fM-eie" firstAttribute="top" secondItem="3" secondAttribute="top" constant="256" id="0Df-Gz-JLi"/>
+                            <constraint firstItem="ef8-fX-F3t" firstAttribute="trailing" secondItem="xFl-Qd-j44" secondAttribute="trailing" type="default" id="6jb-2m-zQc"/>
+                            <constraint firstItem="ef8-fX-F3t" firstAttribute="baseline" secondItem="OvX-fM-eie" secondAttribute="baseline" type="default" id="8Wg-KH-Bbk"/>
+                            <constraint firstItem="xFl-Qd-j44" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="OmL-VR-cmL"/>
+                            <constraint firstItem="xFl-Qd-j44" firstAttribute="top" secondItem="3" secondAttribute="top" constant="115" id="XFN-4l-jus"/>
+                            <constraint firstItem="OvX-fM-eie" firstAttribute="leading" secondItem="xFl-Qd-j44" secondAttribute="leading" type="default" id="ZyI-dO-N0A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="行き先は？" id="jgP-Dr-mIK"/>
+                    <connections>
+                        <outlet property="myButton" destination="OvX-fM-eie" id="G0h-le-3j1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="49"/>
+        </scene>
+        <!--View Controller - 国内旅行-->
+        <scene sceneID="j7k-Qr-j4y">
+            <objects>
+                <viewController id="pQb-nL-LT0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xmt-b2-qf9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="7nB-8Y-raC" userLabel="Label - あなたは国内旅行派？ それとも海外旅行派？">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="e63-R5-2b5"/>
+                                    <constraint firstAttribute="height" constant="80" id="khO-ek-yKH"/>
+                                </constraints>
+                                <string key="text">目一杯楽しむ？
+それとものんびり？</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72E-r8-Dfp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="7Dx-u8-T7G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="目一杯">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7X1-cF-x4r">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="TXg-pI-PU8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="のんびり">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7X1-cF-x4r" firstAttribute="trailing" secondItem="7nB-8Y-raC" secondAttribute="trailing" type="default" id="4yf-4p-IiR"/>
+                            <constraint firstItem="72E-r8-Dfp" firstAttribute="leading" secondItem="7nB-8Y-raC" secondAttribute="leading" type="default" id="hZw-ak-w3t"/>
+                            <constraint firstItem="72E-r8-Dfp" firstAttribute="baseline" secondItem="7X1-cF-x4r" secondAttribute="baseline" type="default" id="iav-Zo-6RP"/>
+                            <constraint firstItem="72E-r8-Dfp" firstAttribute="top" secondItem="xmt-b2-qf9" secondAttribute="top" constant="252" id="kR5-jg-d5Y"/>
+                            <constraint firstItem="7nB-8Y-raC" firstAttribute="top" secondItem="xmt-b2-qf9" secondAttribute="top" constant="111" id="sLn-qs-UUT"/>
+                            <constraint firstItem="7nB-8Y-raC" firstAttribute="centerX" secondItem="xmt-b2-qf9" secondAttribute="centerX" type="default" id="vtX-1g-D5g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="国内旅行" id="TQV-4f-V8o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROM-Oi-pko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="49"/>
+        </scene>
+        <!--View Controller - 海外旅行-->
+        <scene sceneID="2Yj-sZ-mD1">
+            <objects>
+                <viewController id="wQU-zK-BG7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cf-9V-MD8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="QPD-LL-Vb6" userLabel="Label - あなたは国内旅行派？ それとも海外旅行派？">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="KH7-w0-fiG"/>
+                                    <constraint firstAttribute="height" constant="80" id="zLR-vg-oaQ"/>
+                                </constraints>
+                                <string key="text">ショッピング？
+それとも絶景？</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYu-ez-tKu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ショッピング">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-5e-aA0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="O5Z-48-SlS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="絶景">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QPD-LL-Vb6" firstAttribute="top" secondItem="1cf-9V-MD8" secondAttribute="top" constant="115" id="2nF-8U-PCJ"/>
+                            <constraint firstItem="FxR-5e-aA0" firstAttribute="baseline" secondItem="mYu-ez-tKu" secondAttribute="baseline" type="default" id="5IE-bv-ZHd"/>
+                            <constraint firstItem="FxR-5e-aA0" firstAttribute="trailing" secondItem="QPD-LL-Vb6" secondAttribute="trailing" type="default" id="PDU-cJ-yc3"/>
+                            <constraint firstItem="QPD-LL-Vb6" firstAttribute="leading" secondItem="mYu-ez-tKu" secondAttribute="leading" type="default" id="Q8V-Se-l56"/>
+                            <constraint firstItem="mYu-ez-tKu" firstAttribute="top" secondItem="1cf-9V-MD8" secondAttribute="top" constant="256" id="RM7-1s-7Fc"/>
+                            <constraint firstItem="QPD-LL-Vb6" firstAttribute="centerX" secondItem="1cf-9V-MD8" secondAttribute="centerX" type="default" id="SDo-r9-K7u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="海外旅行" id="HjJ-OA-NgJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aib-ex-zvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="710"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Xu-Y3-3oU">
+            <objects>
+                <navigationController id="AUF-kB-OKi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="eDd-F2-USP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="fmj-g4-FFV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ki0-wm-Phv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="54"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="leftButtonAction:"/>
+                <relationship kind="outlet" name="myButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
