@@ -1,0 +1,49 @@
+新規プロジェクト作成
+1.Fileメニュー → New → Project
+2.iOS → Application → Single View Application → Next
+3.Product Name は大文字から
+3.Use Storyboards をチェック
+4.Use Automatic Reference Counting をチェック → Next
+5.保存場所を指定
+6.Git で管理する場合は Source Control: をチェック → Create
+
+
+Storyboardでの基本操作
+1.Project Navigator から MainStoryboard.storyboard を選択
+2.Object Library から UIパーツを View へドラッグ
+3.Attributes inspector で属性を設定
+4.Size inspector で位置とサイズを設定
+
+
+Navigation Controllerの設置
+1.Navigation Controller で管理を始める View Controller を選択
+2.Editorメニュー → Embed In → Navigation Controller
+3.UIButton から Control + ドラッグ で次の View Controller へ Segue を設定する際、Push を選択すれば、Navigation Controller で管理可能
+
+
+UIパーツとソースコードを結びつける
+1.該当 View Controller を選択し、Assistant Editor を開く
+2.UIパーツ から Control + ドラッグ でヘッダファイルの @interface 行の下まで
+3.Outlet 名等を入力して Connect
+4.UIButton などの場合は Action名等を入力して Connect
+
+
+新規クラス作成
+1.Project Navigator からプロジェクト名グループ（フォルダ）を右クリック
+2.New File → iOS → Cocoa Touch → Objective-C class → Next
+3.必ず先に Subclass of を選択
+4.Class名は大文字から
+
+
+画像ファイル、音声ファイルなどのインポート
+1.Finder上で該当プロジェクトのフォルダ内に任意の新規フォルダ作成
+2.そのフォルダ内にファイルをコピー
+3.Xcode上で Project Navigator からプロジェクト名グループ（フォルダ）を右クリック
+4.Add Files to 〜
+5.上記フォルダを指定 → Folders 欄は Create groups for any added folders を選択 → Add
+
+
+Image View で画像ファイル指定
+1.Object Library から Image View を View へドラッグ
+2.Attributes inspector の Image 欄で画像ファイルを選択
+
